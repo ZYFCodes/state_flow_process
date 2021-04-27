@@ -1,5 +1,6 @@
 package org.zyf.stateflowprocess;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2021/4/25  22:50
  */
 @SpringBootApplication
+@MapperScan(basePackages = "org.zyf.stateflowprocess.mapper")
 public class StateFlowProcessStartApp {
     public static void main(String[] args) {
         SpringApplication.run(StateFlowProcessStartApp.class, args);

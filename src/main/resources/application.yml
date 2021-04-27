@@ -1,0 +1,29 @@
+##共同的,不随着环境变量改变而动态变化的值,放到这个文件里面
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+spring:
+  application:
+    name: alert-config
+
+default:
+  alert:
+    receive:
+      appcode: default-alert-receiver
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.mfw.alertconfig.dao
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  config:
+    classpath: logback-spring.xml

@@ -9,13 +9,13 @@ import org.springframework.context.ApplicationContextAware;
  * @description
  * @date 2021/4/25  23:21
  */
-public class BeanFactoryUtils implements ApplicationContextAware {
+public class ZyfBeanFactoryUtils implements ApplicationContextAware {
     public static ApplicationContext applicationContext;
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext)
             throws BeansException {
-        BeanFactoryUtils.applicationContext = applicationContext;
+        ZyfBeanFactoryUtils.applicationContext = applicationContext;
     }
 
     public static Object getBean(String name) {
